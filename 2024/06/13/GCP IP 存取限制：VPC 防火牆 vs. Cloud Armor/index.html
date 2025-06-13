@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://blog.benso.dpdns.org/root_img/Aprilia-black-motorcycle_1920x1080_wallpaper.jpg">
 <meta property="article:published_time" content="2024-06-13T02:55:00.000Z">
-<meta property="article:modified_time" content="2025-06-13T02:57:35.035Z">
+<meta property="article:modified_time" content="2025-06-13T02:59:50.148Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="學習筆記,Go Roam">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "https://blog.benso.dpdns.org/2024/06/13/GCP%20IP%20%E5%AD%98%E5%8F%96%E9%99%90%E5%88%B6%EF%BC%9AVPC%20%E9%98%B2%E7%81%AB%E7%89%86%20vs.%20Cloud%20Armor/",
   "image": "https://blog.benso.dpdns.org/root_img/Aprilia-black-motorcycle_1920x1080_wallpaper.jpg",
   "datePublished": "2024-06-13T02:55:00.000Z",
-  "dateModified": "2025-06-13T02:57:35.035Z",
+  "dateModified": "2025-06-13T02:59:50.148Z",
   "author": [
     {
       "@type": "Person",
@@ -159,7 +159,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Benson's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">GCP IP 存取限制：VPC 防火牆 vs. Cloud Armor</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">GCP IP 存取限制：VPC 防火牆 vs. Cloud Armor</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2024-06-13T02:55:00.000Z" title="發表於 2024-06-13 10:55:00">2024-06-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2025-06-13T02:57:35.035Z" title="更新於 2025-06-13 10:57:35">2025-06-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">瀏覽量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ul>
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Benson's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">GCP IP 存取限制：VPC 防火牆 vs. Cloud Armor</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">GCP IP 存取限制：VPC 防火牆 vs. Cloud Armor</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2024-06-13T02:55:00.000Z" title="發表於 2024-06-13 10:55:00">2024-06-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2025-06-13T02:59:50.148Z" title="更新於 2025-06-13 10:59:50">2025-06-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">瀏覽量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ul>
 <li><strong>GCP VM (虛擬機)</strong>：主要使用 <strong>VPC 防火牆規則 (Firewall Rules)</strong> 進行 IP 限制。</li>
 <li><strong>GCP LB (負載平衡器)</strong>：主要使用 <strong>Cloud Armor</strong> 進行 IP 限制。</li>
 </ul>
@@ -242,7 +242,7 @@
 <td>為獨立的付費服務 (依策略、規則數量和流量計費)</td>
 </tr>
 </tbody></table>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>您的理解是正確且高效的記憶方式。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>正確且高效的記憶方式。</p>
 <ul>
 <li>當您需要保護單一或一組 <strong>VM 的網路連線</strong> 時，請使用 <strong>VPC 防火牆規則</strong>。</li>
 <li>當您需要保護一個由 <strong>外部負載平衡器</strong> 所提供的 <strong>公開服務</strong> 時，請使用 <strong>Cloud Armor</strong>，它能提供更全面的應用層保護。</li>
