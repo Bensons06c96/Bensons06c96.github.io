@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Benson's Blog</title><meta name="author" content="Benson"><meta name="copyright" content="Benson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Benson&#39;s Blog">
+<meta property="og:url" content="https://bensons06c96.github.io/index.html">
+<meta property="og:site_name" content="Benson&#39;s Blog">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://bensons06c96.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="Benson">
+<meta property="article:tag" content="學習筆記,Go Roam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bensons06c96.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Benson's Blog",
+  "url": "https://bensons06c96.github.io/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://bensons06c96.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '複製成功',
+    error: '複製失敗',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '載入更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Benson\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Benson's Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Benson's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/18/Cloud%20NAT%20%E8%88%87%20Kubernetes%20Cluster%20%E7%9A%84%E9%97%9C%E4%BF%82/" title="Cloud NAT 與 Kubernetes Cluster 的關係">Cloud NAT 與 Kubernetes Cluster 的關係</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2025-06-18T06:55:00.000Z" title="發表於 2025-06-18 14:55:00">2025-06-18</time></span></div><div class="content">Kubernetes (K8s) Cluster，特別是在 Google Cloud (GKE) 環境中，其內部運行的 Pods (應用程式實例) 通常只擁有私有 IP 地址。這些地址在 K8s Cluster 所在的 VPC 網路內部有效，但無法直接與網際網路進行通信。 這就引出了 Cloud NAT 的核心作用：  兩者關係的核心點：Cloud NAT 作為一個託管式的網路服務，專門解決 K8s Cluster 內部的 Pods 「主動對外發起連接」的需求。它充當 K8s Cluster 與網際網路之間的一個高效率、安全的「出站代理」或「翻譯機」。  出站連接的啟用 (Egress Connectivity): 場景： 當 K8s Cluster 內的 Pod 需要連接到外部資源時，例如：  從 Docker Hub 或 Google Container Registry 拉取容器映像。 呼叫外部的 API 服務 (如金流、簡訊平台)。 更新操作系統或應用程式所需的軟體套件。   作用： Pods 發出的這些流量會被路由到 Cloud NAT。Cloud NAT...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/13/GCP%20IP%20%E5%AD%98%E5%8F%96%E9%99%90%E5%88%B6%EF%BC%9AVPC%20%E9%98%B2%E7%81%AB%E7%89%86%20vs.%20Cloud%20Armor/" title="GCP IP 存取限制：VPC 防火牆 &amp; Cloud Armor">GCP IP 存取限制：VPC 防火牆 &amp; Cloud Armor</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2025-06-13T02:55:00.000Z" title="發表於 2025-06-13 10:55:00">2025-06-13</time></span></div><div class="content"> GCP VM (虛擬機)：主要使用 VPC 防火牆規則 (Firewall Rules) 進行 IP 限制。 GCP LB (負載平衡器)：主要使用 Cloud Armor 進行 IP 限制。  這兩種工具雖然都能限制 IP 存取，但它們運作在不同的層級，保護的對象和提供的功能也有所區別。以下是詳細的說明。  1. GCP VM 的 IP 限制：VPC 防火牆規則 (VPC Firewall Rules)VPC 防火牆規則是在網路層級運作的，直接控制進出 VM 執行個體的流量。 核心概念 層級：運作於 OSI 模型的 Layer 4 (網路層&#x2F;傳輸層)。 功能：根據 IP 位址、通訊協定 (TCP&#x2F;UDP) 和連接埠 (Port) 來允許或拒絕流量。 狀態性：防火牆是「狀態性」的。如果您設定了一條允許連線「進入」的規則，則該連線相關的「返回」流量會被自動允許，無需額外設定反向規則。  如何運作 建立規則：在您的 VPC 網路中建立一條防火牆規則。 指定方向：選擇 Ingress (傳入) 或 Egress (傳出)。IP 限制通常是設定 Ingress...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Benson</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/18/Cloud%20NAT%20%E8%88%87%20Kubernetes%20Cluster%20%E7%9A%84%E9%97%9C%E4%BF%82/" title="Cloud NAT 與 Kubernetes Cluster 的關係">Cloud NAT 與 Kubernetes Cluster 的關係</a><time datetime="2025-06-18T06:55:00.000Z" title="發表於 2025-06-18 14:55:00">2025-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/13/GCP%20IP%20%E5%AD%98%E5%8F%96%E9%99%90%E5%88%B6%EF%BC%9AVPC%20%E9%98%B2%E7%81%AB%E7%89%86%20vs.%20Cloud%20Armor/" title="GCP IP 存取限制：VPC 防火牆 &amp; Cloud Armor">GCP IP 存取限制：VPC 防火牆 &amp; Cloud Armor</a><time datetime="2025-06-13T02:55:00.000Z" title="發表於 2025-06-13 10:55:00">2025-06-13</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>歸檔</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章數量 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">訪客數 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">總瀏覽量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最後更新時間 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-07-09T06:15:33.295Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By Benson</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 0.0.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日夜模式切換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂端"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
